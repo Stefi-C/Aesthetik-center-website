@@ -44,10 +44,14 @@ ul li{
 }
 ul li a{
     text-decoration: none;
-    color: #000;
+    color: #222;
     padding: 0 10x;
     position: relative;
+    opacity: .6;
     
+}
+ul li a:hover{
+    opacity: 1;
 }
 ul li a::after{
     content: '';
@@ -64,10 +68,12 @@ ul li a:hover::after{
     width: 100%;
     
 }
-.navbar-icons img{
-    height: 35px;
+.navbar-icons svg{
+    height: 20px;
     margin-left: 40px;
     cursor: pointer;
+    opacity: .5;
+    color: #222;
 }
 .navbar-icons{
     margin-left: 40px;
@@ -99,7 +105,7 @@ ul li a:hover::after{
     right: 0;
     top: -10px;
     z-index: 0;
-    opacity: .7;
+    opacity: .6;
 }
 
 .left-column h1{
@@ -121,11 +127,31 @@ span{
     font-size: 75px;
     
 }
-
+.search-box{
+    width: 45%;
+    display: flex;
+    padding-bottom:3px ;
+    border-bottom: 1px solid #ddd;
+    margin: 10px 0 30px;
+}
+.search-box img{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+.search-box input{
+    width: 100%;
+    margin-left: 15px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
 .left-column p{
-    width: 54%;
+    width: 50%;
+    padding: 10px;
     font-size: 18px;
-    margin: 50px 0;
+    margin: 10px 0;
     color: #222;
     text-align: justify;
 }
@@ -240,29 +266,12 @@ span{
     border: 1px solid #000;
     border-radius: 35px;
     margin: 30px;
-    -webkit-box-shadow: 6px 3px 12px -3px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 6px 3px 12px -3px rgba(0, 0, 0, 1);
     box-shadow: 6px 3px 12px -3px rgba(0, 0, 0, 1);
 }
 
 
-.click{
-    font-size: 14px;
-    margin: 5px;
-    padding: 10px;
-    background: linear-gradient(#915b4a, #fff);
-    border-radius: 5px;
-    border: 1px solid #915b4a;
-    color: #000;
-    font-weight: 600;
-    cursor: pointer;
-    -webkit-box-shadow: 7px 10px 8px -10px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 7px 10px 8px -10px rgba(0, 0, 0, 1);
-    box-shadow: 7px 10px 8px -10px rgba(0, 0, 0, 1);
-}
-
-.click:hover{
-    transform: scale(1.1);
+.front-card img{
+    background-color: #915b4a;
 }
 
 
