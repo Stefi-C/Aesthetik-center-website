@@ -78,43 +78,30 @@ ul li a:hover::after{
     justify-content: center;
 
 }
-.left-column, .right-column{
-    flex-basis: 50%;
+.left-column{
+    width: 80%;
+    z-index: 1;
 }
+
 .right-column{
+    width: 20%;
     display: flex;
     align-items: center;
+    position: relative;
 
     
 }
 .right-column img{
-    width: 80%;
-    margin: 80px;
-    border-radius: 35px;
-    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 56, 56, 1);
-    -moz-box-shadow: 8px 8px 24px 0px rgba(66, 56, 56, 1);
+    width: 650px;
+    height: 400px;
     box-shadow: 8px 8px 24px 0px rgba(66, 56, 56, 1);
+    position: absolute;
+    right: 0;
+    top: -10px;
+    z-index: 0;
+    opacity: .7;
 }
-.search-box{
-    width: 45%;
-    display: flex;
-    padding-bottom:3px ;
-    border-bottom: 1px solid #ddd;
-    margin: 10px 0 30px;
-}
-.search-box img{
-    height: 25px;
-    width: 25px;
-    cursor: pointer;
-}
-.search-box input{
-    width: 100%;
-    margin-left: 15px;
-    font-size: 17px;
-    border: none;
-    outline: none;
-    background: transparent;
-}
+
 .left-column h1{
     font-size: 100px;
 }
@@ -127,26 +114,35 @@ span{
 .italic-letter{
     font-family: 'Great Vibes', cursive ;
     font-weight: 300;
+    font-size: 125px;
 }
+.banner h1{
+    color: #222;
+    font-size: 75px;
+    
+}
+
 .left-column p{
-    font-size: 14px;
+    width: 54%;
+    font-size: 18px;
     margin: 50px 0;
-    color: #000;
+    color: #222;
+    text-align: justify;
 }
 .btn button{
+    font-size: 18px;
     padding: 7px 30px;
     margin-right: 15px;
     outline: 15px;
     border: 1px solid #915b4a;
     border-radius: 20px;
     cursor: pointer;
-    color: #915b4a;
+    color: #222;
     background: transparent;
 }
 .btn .primary-btn{
     background: linear-gradient(#915b4a, #a96851);
-    box-shadow: 0 2px 15px rgba(248, 38, 103, 0.26);
-    color: #000;
+    color:#222;
 }
 .btn{
     margin-bottom: 50px;
