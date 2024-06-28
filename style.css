@@ -272,6 +272,11 @@ span{
 
 .front-card img{
     background-color: #915b4a;
+    cursor: pointer;
+}
+.front-card img:hover{
+    transform: scale(1.1);
+    background-color: #a96851;
 }
 
 
@@ -493,10 +498,10 @@ span{
 .banner-container-about img{
     width: 400px;
     height: 250px;
-    opacity: .5;
     position: relative;
     top: -15px;
     z-index: 1;
+    box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
 }
 .description{
     margin: 0;
@@ -572,6 +577,35 @@ span{
     padding: 0 20px;
     text-align: initial;
 }
+
+
+/*-------------------------------------------------------book-------------------------------------------------------------------------*/
+#book-banner{
+    background:linear-gradient(#efbfaefb 0%,rgba(92, 77, 77, 0.415) 30%, rgba(92, 77, 77, 0.119) 100%), url(/images/book-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+}
+.banner-title{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+.banner-title h1{
+    font-size: 105px;
+    color: #ddd;
+    font-weight: 900;
+}
+.banner-title h2{
+    margin: 20px;
+}
+
+
+
+
 /*----------------------------------------------------------footer*---------------------------------------------------------------*/
 
 #footer{
