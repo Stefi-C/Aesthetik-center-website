@@ -585,14 +585,14 @@ span{
     background-position: center;
     background-size: cover;
     z-index: 2;
+    height: 70vh;
 }
 .banner-title{
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 70vh;
+    
 }
 .banner-title h1{
     font-size: 105px;
@@ -602,10 +602,59 @@ span{
 .banner-title h2{
     margin: 20px;
 }
+#book-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 0;
+    background: #ddd;
+}
+.book-form-banner{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
-
-
-
+}
+.book-form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-1{
+    display: flex;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 40px 30px;
+}
+.book-form input, .book-form select{
+    border: none;
+    margin-bottom: 20px;
+    background: transparent;
+    border-bottom: 2px solid #2222229c;
+    font-size: 20px;
+}
+.book-form select{
+    opacity: .7;
+}
+.input-date{
+    width: 500px;
+}
+.book-btn{
+    background: transparent;
+    border: 2px solid #2222229c;
+    padding: 7px 10px;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
 /*----------------------------------------------------------footer*---------------------------------------------------------------*/
 
 #footer{
