@@ -464,29 +464,52 @@ span{
 /*----------------------------------------------------about------------------------------------------------------------------*/
 
 
-
+.about-banner{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
 .banner-container-about{
+    height: 80vh;
+    width: 90vw;
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    position: relative;
 }
-.container-about-left img, .container-about-right img{ 
-    border-radius: 30px;
-    width: 500px;
-    height: 350px;
-    -webkit-box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
-    box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
-} 
-.container-about-center img{
-    border-radius: 20px;
+.container-about{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about-center-img{
+    position: absolute;
+    bottom: 0;
+}
+.banner-container-about img{
     width: 400px;
     height: 250px;
-    -webkit-box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
-    box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
+    opacity: .5;
+    position: relative;
+    top: -15px;
+    z-index: 1;
 }
+.description{
+    margin: 0;
+}
+.description p{
+    text-align: justify;
+}
+
+
+
+
+
+
 #features{
     text-align: center;
     padding: 70px 0;
