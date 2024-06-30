@@ -676,15 +676,15 @@ select:focus{
     cursor: pointer;
 }
 /*--------------------------------------------------------------------face-treatment---------------------------------------------------*/
-#face-treatment{
+#treatment{
     margin: 80px 30px;
     
 }
-.face-treatment ul{
+.treatment ul{
     display: flex;
     flex-direction: column;
 }
-.face-treatment ul li{
+.treatment ul li{
     width: 100%;
     box-shadow: 2px 2px 5px #222;
     display: flex;
