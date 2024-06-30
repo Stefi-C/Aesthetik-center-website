@@ -674,9 +674,11 @@ span{
 
 }
 .treatment-img{
-    width: 200px;
-    height: 150px;
+    width: 350px;
+    height: 200px;
     padding: 20px;
+    box-shadow: 2px 2px 5px #222;
+    margin: 0 15px 0 15px;
 }
 .treatment-img img{
     width: 100%;
