@@ -166,6 +166,10 @@ span{
     color: #222;
     background: transparent;
 }
+.btn button a{
+    text-decoration: none;
+    color: #222;
+}
 .btn .primary-btn{
     background: linear-gradient(#915b4a, #a96851);
     color:#222;
@@ -636,11 +640,22 @@ span{
     margin: 40px 30px;
 }
 .book-form input, .book-form select{
+
     border: none;
     margin-bottom: 20px;
     background: transparent;
     border-bottom: 2px solid #2222229c;
     font-size: 20px;
+}
+select{cursor: pointer;}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+input:focus{
+    outline: none;
+}
+select:focus{
+    outline: none;
 }
 .book-form select{
     opacity: .7;
@@ -654,6 +669,10 @@ span{
     padding: 7px 10px;
     text-transform: uppercase;
     margin-top: 50px;
+}
+.book-btn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 /*--------------------------------------------------------------------face-treatment---------------------------------------------------*/
 #face-treatment{
