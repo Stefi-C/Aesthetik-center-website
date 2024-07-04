@@ -191,7 +191,7 @@ ul li a:hover::after{
 
 
 .side-bar{
-    background: #a96851;
+    background: #a9685186;
     backdrop-filter: blur(15px);
     width: 250px;
     height: 100vh;
@@ -199,7 +199,7 @@ ul li a:hover::after{
     top: 0;
     right: -250px;
     overflow-y: auto;
-    transition: 0.8s ease ease-in-out;
+    transition: 0.8s ease;
     transition-property: left;
     z-index: 999;
    }
@@ -259,7 +259,7 @@ ul li a:hover::after{
    }
    
    .side-bar .menu .item .sub-menu{
-    background: #5c4d4d;
+    background: #a66e5a;
     display: none;
    }
    
