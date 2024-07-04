@@ -4,6 +4,9 @@
     padding: 0;
     font-family: 'Dosis', sans-serif;
     font-weight: 300;
+
+}
+html{
     overflow-x: hidden;
 }
 #banner{
@@ -17,6 +20,7 @@
 .hero{
     width: 80%;
     margin: auto;
+    padding: 20px;
    
 }
 .logo img{
@@ -92,7 +96,6 @@ ul li a:hover::after{
     position: fixed;
     z-index: 999;
     right: 0;
-    display: none;
 }
 
 .menu__container{
@@ -184,9 +187,140 @@ ul li a:hover::after{
     background-color: #798499;
 }
 
-
 */
 
+
+.side-bar{
+    background: #a96851;
+    backdrop-filter: blur(15px);
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    overflow-y: auto;
+    transition: 0.8s ease ease-in-out;
+    transition-property: left;
+    z-index: 999;
+   }
+   .side-bar::-webkit-scrollbar {
+     width: 0px;
+   }
+   
+   
+   
+   .side-bar.active{
+    right: 0;
+   }
+   .side-bar-title{
+     opacity: .5;
+     text-align: center;
+     font-weight: 500;
+     font-size: 25px;
+     padding-bottom: 13px;
+     font-family: sans-serif;
+     letter-spacing: 2px;
+   }
+   
+   .side-bar .menu{
+    width: 100%;
+    margin-top: 30px;
+   }
+   
+   .side-bar .menu .item{
+    position: relative;
+    cursor: pointer;
+   }
+   
+   .side-bar .menu .item a{
+    color: #222;
+    opacity: .8;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+   }
+   
+   .side-bar .menu .item a:hover{
+    background: #915b4a;
+    transition: 0.3s ease;
+   }
+   
+   .side-bar .menu .item i{
+    margin-right: 15px;
+   }
+   
+   .side-bar .menu .item a .dropdown{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+   }
+   
+   .side-bar .menu .item .sub-menu{
+    background: #5c4d4d;
+    display: none;
+   }
+   
+   .side-bar .menu .item .sub-menu a{
+    padding-left: 80px;
+   }
+   
+   .rotate{
+    transform: rotate(90deg);
+   }
+   
+   .close-btn{
+    position: absolute;
+    color: #222;
+    opacity: .5;
+    font-size: 23px;
+    right:  0px;
+    margin: 15px;
+    cursor: pointer;
+   }
+   
+   .side-bar .menu-btn{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    margin: 25px;
+    cursor: pointer;
+   }
+   
+   .main-sidebar{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+   }
+   
+   .main-sidebar h1{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 60px;
+    text-align: center;
+    line-height: 80px;
+   }
+   
+   @media (max-width: 900px){
+    .main h1{
+      font-size: 40px;
+      line-height: 60px;
+    }
+   }
+   .side-bar img{
+     width: 100px;
+     margin: 15px;
+     border-radius: 50%;
+     margin-left: 70px;
+     border: 3px solid #5c4d4d;
+   }
+   .sidebar header{
+     background: #33363a;
+   }
+   
 /*
 @media (max-width:800px){
     .menu__hamburguer{
@@ -261,17 +395,16 @@ ul li a:hover::after{
     justify-content: center;
 
 }
-.left-column{
+.main-left-column{
     width: 80%;
     z-index: 2;
 }
 
-.right-column{
+.main-right-column{
     width: 20%;
     display: flex;
     align-items: center;
     position: relative;
-    border: 2px solid red;
 
     
 }
@@ -284,13 +417,12 @@ ul li a:hover::after{
     top: -10px;
     z-index: 1;
     opacity: .6;
-    border: 2px solid green;
 }
 
-.left-column h1{
+.main-left-column h1{
     font-size: 100px;
 }
-.left-column h3{
+.main-left-column h3{
     font-size: 35px;
 }
 span{
@@ -326,7 +458,7 @@ span{
     outline: none;
     background: transparent;
 }
-.left-column p{
+.main-left-column p{
     width: 50%;
     padding: 10px;
     font-size: 18px;
@@ -924,14 +1056,14 @@ cursor: pointer;
   height: 250px;
   margin: 5px;
 
-}
+}*/
 /*-
 ---------------------------------------------------------footer*---------------------------------------------------------------*/
 
 #footer{
     margin: 20px 10px 0 10px;
     padding: 10px;
-    background-color: #5c4d4d;
+    background: #5c4d4d;
     -webkit-box-shadow: inset 1px 2px 25px -13px rgba(0, 0, 0, 1);
     -moz-box-shadow: inset 1px 2px 25px -13px rgba(0, 0, 0, 1);
     box-shadow: inset 1px 2px 25px -13px rgba(0, 0, 0, 1);
@@ -943,7 +1075,7 @@ cursor: pointer;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  background: transparent;
+  background: #5c4d4d;
   border: 1px solid #5c4d4d;
   -webkit-box-shadow: inset 1px 2px 25px -13px rgba(0, 0, 0, 1);
   -moz-box-shadow: inset 1px 2px 25px -13px rgba(0, 0, 0, 1);
