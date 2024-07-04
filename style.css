@@ -4,6 +4,7 @@
     padding: 0;
     font-family: 'Dosis', sans-serif;
     font-weight: 300;
+    overflow-x: hidden;
 }
 #banner{
     background: rgb(242,241,231);
@@ -78,7 +79,182 @@ ul li a:hover::after{
 }
 .navbar-icons{
     margin-left: 40px;
+    display: flex;
 }
+
+/*----------------------------------------------------------------------side-menu------------------------------
+
+.menu{
+    background-color: #915b4a;
+    color: #ddd;
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    display: none;
+}
+
+.menu__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.close-btn{
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    font-size: large;
+}
+.profil-img{
+    margin: 10px;
+    width: 100px;
+    border-radius: 50%;
+}
+.profil-img img{
+    width: 100%;
+    border-radius: 50%;
+}
+.menu__links{
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__item{
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+
+.menu__item:hover{
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+}
+
+.menu__link{
+    color: #ddd;
+    text-decoration: none;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+
+.menu__link:hover{
+    background-color: #5e7094;
+}
+
+
+.menu__arrow{
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: 3px;
+}
+
+.menu__nesting{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    transition:clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: #000;
+}
+
+.menu__link--inside{
+    padding: 30px 100px 30px 20px;
+}
+
+.menu__link--inside:hover{
+    background-color: #798499;
+}
+
+
+*/
+
+/*
+@media (max-width:800px){
+    .menu__hamburguer{
+        display: flex;
+    }
+
+    .menu__item{
+        --clip:0;
+        overflow:hidden ;
+    }
+
+    .menu__item--active{
+        --transform: rotate(0);
+        --background: #5e7094;
+    }
+
+    .menu__item--show{
+        background-color: var(--background);
+    }
+
+
+    .menu__links{
+        position: fixed;
+        max-width: 400px;
+        width: 100%;
+        top: 70px;
+        bottom: 0;
+        right: 0;
+        background-color: #000;
+        overflow-y: auto;
+        display: grid;
+        grid-auto-rows: max-content;
+        transform: translateX(100%);
+    }
+
+    .menu__links--show{
+        transform: unset;
+        width: 100%;
+    }
+
+    .menu__link{
+        padding: 25px 0;
+        padding-left: 30px;
+        height: auto;
+    }
+
+    .menu__arrow{
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .menu__nesting{
+        display: grid;
+        position: unset;
+        width: 100%;
+        transform: translateY(0);
+        height: 0;
+        transition: height .3s;
+    }
+
+    .menu__link--inside{
+        width: 90%;
+        margin-left: auto;
+        border-left: 1px solid #798499;
+    }
+}
+*/
+/*banner*/
 .banner{
     display: flex;
     margin-top: 80px;
@@ -87,7 +263,7 @@ ul li a:hover::after{
 }
 .left-column{
     width: 80%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .right-column{
@@ -95,18 +271,20 @@ ul li a:hover::after{
     display: flex;
     align-items: center;
     position: relative;
+    border: 2px solid red;
 
     
 }
-.right-column img{
+.banner-img{
     width: 650px;
     height: 400px;
     box-shadow: 8px 8px 24px 0px rgba(66, 56, 56, 1);
     position: absolute;
     right: 0;
     top: -10px;
-    z-index: 0;
+    z-index: 1;
     opacity: .6;
+    border: 2px solid green;
 }
 
 .left-column h1{
