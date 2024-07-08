@@ -32,6 +32,7 @@ html{
     font-family: 'Great Vibes', cursive ;
     margin-top: 30px;
     margin-left: -15px;
+    text-transform: capitalize;
 }
 .navbar{
     margin: 30px auto;
@@ -54,11 +55,12 @@ ul li a{
     padding: 0 10x;
     position: relative;
     opacity: .6;
+    text-transform: capitalize;
     
 }
 ul li a:hover{
     opacity: 1;
-}
+}/*
 ul li a::after{
     content: '';
     width: 0;
@@ -73,7 +75,7 @@ ul li a::after{
 ul li a:hover::after{
     width: 100%;
     
-}
+}*/
 .navbar-icons svg{
     height: 20px;
     margin-left: 40px;
@@ -989,6 +991,12 @@ select:focus{
 #treatment{
     margin: 80px 30px;
     
+}
+.treatment-header ul{
+    display: flex;
+}
+.treatment-header ul li:hover{
+
 }
 .treatment ul{
     display: flex;
