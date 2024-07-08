@@ -634,6 +634,7 @@ span{
     padding: 10px;
 }
 .promo-btn{
+    cursor: pointer;
     margin: 50px 10px;
     padding: 5px 15px;
     width: 160px;
@@ -987,10 +988,9 @@ select:focus{
     transform: scale(1.1);
     cursor: pointer;
 }
-/*--------------------------------------------------------------------face-treatment---------------------------------------------------*/
+/*---------------------------------------------------------------------treatment---------------------------------------------------*/
 #treatment{
     margin: 80px 30px;
-    
 }
 .treatment-header ul{
     display: flex;
@@ -1001,6 +1001,8 @@ select:focus{
 .treatment ul{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .treatment ul li{
     width: 100%;
