@@ -1762,7 +1762,7 @@ textarea:focus {
   transition: all 0.3s ease 0s;
   width: 45%;
   display: inline-block;
-  float: left;
+  -float: left;
   margin-right: 15px;
 }
 .shopping-cart-btn a:last-child{margin:0;}
