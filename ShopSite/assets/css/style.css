@@ -1343,7 +1343,7 @@ textarea:focus {
     background: #e5d0d0;
 }
 .blue-bg {
-    background: #915b4a;
+    background: rgb(147, 73, 89);
 }
 .default-bg {
     background: #8b4e3b;
@@ -2717,13 +2717,13 @@ textarea:focus {
     3. Shop grid style
 -----------------------------*/
 .breadcrumb-content h3 {
-  color: #fff;
+  color: rgb(147, 73, 89);
   font-family: "Montserrat",sans-serif;
   font-size: 36px;
   font-weight: 600;
 }
 .breadcrumb-content li {
-  color: #fff;
+  color: rgb(147, 73, 89);
   display: inline-block;
   font-size: 14px;
   font-weight: 500;
@@ -2731,7 +2731,7 @@ textarea:focus {
   position: relative;
 }
 .breadcrumb-content li a {
-  color: #fff;
+  color: rgb(147, 73, 89);
   margin-right: 20px;
 }
 .breadcrumb-content li a:hover {
