@@ -981,7 +981,7 @@ select:focus{
     display: flex;
 }
 .treatment-header ul li:hover{
-
+   color: #5c4d4d;
 }
 .treatment ul{
     display: flex;
@@ -1066,16 +1066,16 @@ cursor: pointer;
 }
 .calendar-container{
     display: flex;
-    justify-content: end;
-    width: 500px;
+    justify-content: space-between;
+    width: 100%;
 }
 .calendar-div{
   background: linear-gradient(145deg, #5c4d4d 0%, #e3c7c7 100%) ;
   border-radius: 10px;
-  margin: auto;
+  margin: auto 10px;
   align-content: center;
   text-align: center;
-  width: 85%;
+  width: 400px;
 }
 .calendar-heading{
     display: flex;
@@ -1103,7 +1103,6 @@ cursor: pointer;
     font-size: 15px;
     text-align: center;
     border-radius: 20px;
-    background: linear-gradient(145deg, #96553d 0%, #e3c7c7 100%);
 }
 /*-
 ---------------------------------------------------------footer*---------------------------------------------------------------*/
