@@ -828,7 +828,6 @@ span{
 .about-banner{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding: 10px 50px;
  }
@@ -881,6 +880,7 @@ span{
     display: flex;
     flex-wrap: wrap ;
     align-items: center;
+    justify-content: center;
     text-align: center;
 
 }
@@ -1244,6 +1244,7 @@ cursor: pointer;
     -moz-box-shadow: inset 1px 2px 25px -13px rgba(0, 0, 0, 1);
     box-shadow: inset 1px 2px 25px -13px rgba(0, 0, 0, 1);
     border-radius: 30px;
+    margin: 5px;
 
 }
 .form-input::placeholder{
@@ -1359,24 +1360,116 @@ hr{
     body{
         border: 5px solid blue;
     }
+    #banner{
+        background: linear-gradient( to bottom, #a469549e 0%, #a9685197 100%), url(/images/banner-wallpaper.jpg) no-repeat;
+        background-size: cover;
+        background-position: bottom 20px;
+        
+        
+    }
     .navbar ul{
        opacity: 0;
        pointer-events: none;
     }
+    .about-banner{
+        height: 110vh;
+    }
     .banner-title h1{
         font-size: 60px;
+    }
+    .banner-container-about{
+        flex-direction: column;
+       
+    }
+    .banner-container-about img{
+        width: 30%;
+        height: auto;
+    }
+    .container-about{
+       flex-direction: row;
+       height: 200px;
+    }
+    .description p{
+        font-size: 18px;
+    }
+    .features-img{
+        display: none;
+    }
+    .features{
+        flex-basis: 80%;
+        height: 100vh;
+        background:linear-gradient(145deg, #5c4d4d61 0%, #5c4d4d52 100%), url(/images/wallpaper-2-faces.avif) no-repeat;
+        background-position: bottom;
+    }
+    .features-banner{
+        padding: 20px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .features h1{
+        color: #e3c7c7;
+        text-shadow: 2px 2px 5px #222;
+    }
+    .features-text p{
+        color: #ddd;
+        text-align: justify;
+        background: #33363a68;
+        padding: 15px;
+        margin: 10px;
+        
     }
     #treatment-header{
         width: 100%;
         align-self: center;
     }
-   
+    .footer-banner{
+        background: linear-gradient(to bottom, #5c4d4d74 0%, #96553d7a 100%), url(/images/wallpaper-roll.avif);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .footer-left{
+        display: none;
+    }
+    .col{
+        padding: 15px;
+    }
+    .form{
+        flex-direction: column;
+    }
+    .footer-right-side{
+        display: flex;
+        flex-direction: row;
+    }
+   .form-button{
+    margin-left: 0px;
+   }
 }
 @media only screen and (max-width: 768px) {
     body{
        border: 5px solid red;
     }
- 
+   
+
+    .banner-container-about img{
+       display: none;
+    }
+    .container-about{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+   .input-date{
+    width: 300px;
+   }
+    .form-group{
+        width: 160px;
+    }
+    .footer-right-side{
+        display: flex;
+        flex-direction: column;
+    }
   
     .treatment{
         width: 90%;
