@@ -54,8 +54,8 @@
                 </div>
               </div>
               <div class="item"><a href="/book.html"><i class="fas fa-calendar-check"></i>Book Now</a></div>
-             
-              <div class="item"><a href="/about.html"><i class="fas fa-info-circle"></i>About</a></div>
+              <div class="item"><a href="#"><i class="fas fa-info-circle"></i>About</a></div>
+              <div class="item"><a href="#"><i class="fas fa-bag-shopping"></i>Shop</a></div>
               <div class="item">
                 <a class="sub-btn"><i class="fas fa-user"></i>Profil<i class="fas fa-angle-right dropdown"></i></a>
                 <div class="sub-menu">
@@ -109,7 +109,7 @@
     <div id="treatment">
         <div class="treatment">
             <ul>
-                <li id="treatment-type-1">
+                <li id="treatment-type-1" class="treatment-type-1">
                     <div class="treatment-desc">
                         <h1>Treatment Name</h1>
                 <button onclick="toggleReadMore(this)" class="myBtn">Read more</button> 
@@ -136,7 +136,7 @@
                     </div>
 
                 </li>
-                <li id="treatment-type-2">
+                <li id="treatment-type-2" class="treatment-type-2">
                     <div class="treatment-img">
                         <img src="/images/face-treatment-2.jpg" alt="">
                         
@@ -162,7 +162,7 @@
                     </div>
 
                 </li>
-                <li id="treatment-type-3">
+                <li id="treatment-type-3" class="treatment-type-1">
                     <div class="treatment-desc">
                         <h1>Treatment Name</h1>
                 <button onclick="toggleReadMore(this)" class="myBtn">Read more</button> 
@@ -189,7 +189,7 @@
                     </div>
 
                 </li>
-                <li id="treatment-type-4">
+                <li id="treatment-type-4" class="treatment-type-2">
                     <div class="treatment-img">
                         <img src="/images/face-treatment-2.jpg" alt="">
                         
@@ -215,7 +215,7 @@
                     </div>
 
                 </li>
-                <li id="treatment-type-5">
+                <li id="treatment-type-5" class="treatment-type-1">
                     <div class="treatment-desc">
                         <h1>Treatment Name</h1>
                 <button onclick="toggleReadMore(this)" class="myBtn">Read more</button> 
@@ -242,7 +242,7 @@
                     </div>
 
                 </li>
-                <li id="treatment-type-6">
+                <li id="treatment-type-6" class="treatment-type-2">
                     <div class="treatment-img">
                         <img src="/images/face-treatment-2.jpg" alt="">
                         
@@ -322,20 +322,32 @@
     <script>
 
    //learn more button
-   function toggleReadMore(button) {
-var dots = button.parentElement.querySelector(".dots");
-var moreText = button.parentElement.querySelector(".more");
-var btnText = button;
-if(dots.style.display === "none"){
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
+   function toggleReadMore(btn) {
+    const treatmentDesc = btn.closest('.treatment-desc');
+    const moreText = treatmentDesc.querySelector('.more');
+    const dots = treatmentDesc.querySelector('.dots');
+    const treatmentImg = treatmentDesc.previousElementSibling || treatmentDesc.nextElementSibling;
 
-moreText.style.display = "none"
-}else{
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less";
-    moreText.style.display = "inline"
-}
+    // Verifica se il testo completo è visibile
+    const isExpanded = moreText.style.display === 'block';
+
+    if (isExpanded) {
+        // Se il testo completo è visibile, nascondilo
+        moreText.style.display = 'none';
+        dots.style.display = 'inline';
+        btn.textContent = 'Read more';
+        if (treatmentImg && treatmentImg.classList.contains('treatment-img')) {
+            treatmentImg.style.display = 'block';
+        }
+    } else {
+        // Se il testo completo non è visibile, mostralo
+        moreText.style.display = 'block';
+        dots.style.display = 'none';
+        btn.textContent = 'Read less';
+        if (treatmentImg && treatmentImg.classList.contains('treatment-img')) {
+            treatmentImg.style.display = 'none';
+        }
+    }
 }
     </script>
 </body>
