@@ -681,8 +681,13 @@ span{
 }
 
 
-/*--------------------------------ourproduct------------------------*/
+/*------------------------------------------product------------------------*/
+
 #our-products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 70px 0;
     background-color: antiquewhite;
@@ -690,103 +695,97 @@ span{
     
     
 }
-.slide-container{
-    margin:0 auto;
+.product-container {
     width: 100%;
-    height: 500px;
-    position: relative;
-    color: antiquewhite;
-}
-.slides{
+    height: 60vh; /* Modificato da 90vh a 80vh */
     display: flex;
-    height: 100%;
-    background-color: transparent;
-    border-radius: 25px;
-    transition: transform 0.7 ease-out;
-}
-.slide{
-    min-width: 100%;
-    height: 100%;
-    width: 450px;
-    margin: 10px;
-    border-radius: 25px;
-    background: rgb(242,241,231);
-    background: linear-gradient(118deg, rgba(242,241,231,1) 0%,
-    rgba(169,104,81,1) 66%, rgba(92,77,77,1) 100%);
-    display: flex;
-    justify-content: space-around;
-    -webkit-box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
-    box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
-    position: relative;
-    box-sizing: border-box;
-}
-.slide img{
-    display: block;
-    padding: 7px;
-    width:350px;
-    height: 350px;
-    margin: 10px;
+    flex-direction: row;
     align-items: center;
-    border-radius: 25px;
-    -webkit-box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
-    box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
+    overflow: hidden;
+    position: relative; /* Aggiunto per posizionamento assoluto */
 }
-.slide-controls{
+
+.imgContainer {
+    width: 130%;
+    height: 100%; /* Adattato all'altezza del container */
     position: absolute;
-    bottom: 0;
     left: 0;
-    transform: translateY(-50%);
-    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-}
-.product-description{
-    align-items: center;
-    text-align: center;
-    margin: 30px;
-    padding: 20px;
-    width: 50%;
-    height: 350px;
-    display: block;
-    position: absolute;
-    color:#222;
-    opacity: 0;
+    transition: 1s;
     
 }
-.slide:hover .product-description{
-    opacity: 1;
+
+.product-img {
+    position: relative;
+    height: 70vh; /* Adattato all'altezza del container */
+    width: auto;
+    margin: 0 10px;
+    filter: saturate(10%);
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px #444;
 }
-.product-description h2{
-    font-size: 50px;
-    font-weight: 600;
+
+.product-button {
+    position: absolute;
+    height: 70vh; /* Adattato all'altezza del container */
+    width: auto;
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
 }
-.product-description p{
-    font-size: 20px;
+
+.product-button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
 }
-#next-btn, #prev-btn{
+
+#slider1:target ~ .imgContainer #img1,
+#slider1:target ~ .imgContainer #button1,
+#slider2:target ~ .imgContainer #img2,
+#slider2:target ~ .imgContainer #button2,
+#slider3:target ~ .imgContainer #img3,
+#slider3:target ~ .imgContainer #button3,
+#slider4:target ~ .imgContainer #img4,
+#slider4:target ~ .imgContainer #button4,
+#slider5:target ~ .imgContainer #img5,
+#slider5:target ~ .imgContainer #button5,
+#slider6:target ~ .imgContainer #img6,
+#slider6:target ~ .imgContainer #button6,
+#slider7:target ~ .imgContainer #img7,
+#slider7:target ~ .imgContainer #button7 {
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+.product-btn{
+    align-self: center;
+    width: 200px;
+    font-size: 18px;
+    padding: 7px 30px;
+    margin: 15px;
+    outline: 15px;
+    border: 1px solid rgb(147, 73, 89);
+    border-radius: 20px;
     cursor: pointer;
+    color: #222;
     background: transparent;
-    font-size: 30px;
+}
+.product-btn:hover{
+    background-color: #a46954;
+    box-shadow: 2px 2px 5px #444;
     border: none;
-    padding: 10px;
-    color: white;
 }
-#next-btn img{
-    width: 35px;
-    transform: rotate(180deg);
+.product-btn a{
+    text-decoration: none;
+    color: #222;
 }
-#prev-btn img{
-    width: 35px;
+.product-btn:hover a{
+    color: #e3c7c7;
 }
-#next-btn:focus , #prev-btn:focus{
-    outline: none;
-}
-
-
-
 /*----------------------------------------------------about----------------------------------------------------------------
 
 
@@ -863,7 +862,7 @@ span{
 }
 .container-about img{
     width: 60%;
-    height: 200px;
+    height: auto;
 }
 .about-description{
     display: flex;
@@ -877,9 +876,13 @@ span{
     font-size: 27px;
     height: 50px;
     padding: 10px;
+    margin-top: 5px;
 }
 .about-description p{
     text-align: justify;
+    margin: 0 5px 0 10px;
+    padding:  5px 10px;
+    font-size: 18px;
 }
 
 #features{
@@ -1117,9 +1120,18 @@ cursor: pointer;
 
 }
 /*--------------------------------------Your-Appointment---------------------------------------------------------*/
-
+.appointment-banner{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(150deg, rgba(242,241,231,1) 0%, rgba(169, 104, 81, 0.452) 66%, rgba(92, 77, 77, 0.461) 100%), url(/images/appointment-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+   
+}
 .appointment-container{
-    display: flex;
+   display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1127,28 +1139,35 @@ cursor: pointer;
 }
 .calendar{
     margin-top: -50px;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
 }
 .calendar-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
+    padding: 10px;flex-wrap: wrap;
 }
 .calendar-div{
-  background: linear-gradient(145deg, #5c4d4d 0%, #e3c7c7 100%) ;
+  background: linear-gradient(145deg, #5c4d4d8a 0%rgba(227, 199, 199, 0.546)c7 100%) ;
   border-radius: 10px;
-  margin: auto 10px;
+  margin: 5px 10px;
   align-content: center;
   text-align: center;
-  width: 400px;
+  height: auto;
+  box-sizing: border-box;
 }
 .calendar-heading{
     display: flex;
+    flex-wrap: nowrap;
     font-size: 20px;
     justify-content: space-between;
     border-radius: 10px 10px 0 0;
     border: 2px solid #222;
     padding: 10px 20px;
-    background: linear-gradient(to right,#a46954 0%, #96553d 40%,  #33363a 100%);
+    background: linear-gradient(to right,#a46954ae 0%, #96553db5 40%,  #33363ab2 100%);
     color: #ddd;
 }
 .calendar-content{
@@ -1158,6 +1177,7 @@ cursor: pointer;
 }
 .days{
     display: flex;
+    flex-wrap: wrap;
 }
 .day{
     cursor: pointer;
@@ -1284,7 +1304,7 @@ cursor: pointer;
     padding: 1.25em 2em;
     margin-left: auto;
     border-radius: 2em;
-    
+    cursor: pointer;
 }
 .footer-links{
     width: 80%;
@@ -1531,7 +1551,7 @@ hr{
         width: 100%;
         margin-bottom: 10px;
     }
-
+   
    .input-date{
     width: 300px;
    }
