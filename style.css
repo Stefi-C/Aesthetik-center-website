@@ -786,55 +786,7 @@ span{
 .product-btn:hover a{
     color: #e3c7c7;
 }
-/*----------------------------------------------------about----------------------------------------------------------------
-
-
-.about-banner{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-}
-.banner-container-about{
-    height: 80vh;
-    width: 90vw;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
-.container-about{
-    height: 80vh;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid red;
-}
-.about-center-img{
-    position: absolute;
-    bottom: 0;
-    
-}
-.banner-container-about img{
-    width: 80%;
-    height: 250px;border: 1px solid blue;
-    position: relative;
-    top: -15px;
-    z-index: 1;
-    box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
-}
-.description{
-    margin: 0;
-}
-.description p{
-    text-align: justify;
-    width: 90%;
-}
-
---*/
+/*----------------------------------------------------about------------------------------------------------------------------*/
 
 .about-banner{
     display: flex;
@@ -1339,9 +1291,7 @@ hr{
 
 /*responsiver*/
 @media only screen and (max-width: 1024px){
-    body{
-        border: 5px solid green;
-    }
+   
   
     .banner-title h1{
         font-size: 80px;
@@ -1389,9 +1339,7 @@ hr{
    
 }
 @media only screen and  (max-width: 900px){
-    body{
-        border: 5px solid blue;
-    }
+  
     #banner{
         background: linear-gradient( to bottom, #a469549e 0%, #a9685197 100%), url(/images/banner-wallpaper.jpg) no-repeat;
         background-size: cover;
@@ -1502,9 +1450,6 @@ hr{
    }
 }
 @media only screen and (max-width: 768px) {
-    body{
-       border: 5px solid red;
-    }
    
 
     .banner-container-about img{
