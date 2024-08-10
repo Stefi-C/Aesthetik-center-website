@@ -639,7 +639,9 @@ span{
     color:#000;
     
 }
-
+.promo-btn:hover{
+    transform: scale(1.1);
+}
 .promo-left{
     display: block;
     margin: 20px;
@@ -690,7 +692,7 @@ span{
 }
 .slide-container{
     margin:0 auto;
-    width: 70%;
+    width: 100%;
     height: 500px;
     position: relative;
     color: antiquewhite;
@@ -700,9 +702,12 @@ span{
     height: 100%;
     background-color: transparent;
     border-radius: 25px;
+    transition: transform 0.7 ease-out;
 }
 .slide{
     min-width: 100%;
+    height: 100%;
+    width: 450px;
     margin: 10px;
     border-radius: 25px;
     background: rgb(242,241,231);
@@ -713,11 +718,14 @@ span{
     -webkit-box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
     -moz-box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
     box-shadow: 3px 0px 16px 3px rgba(0, 0, 0, 1);
+    position: relative;
+    box-sizing: border-box;
 }
 .slide img{
+    display: block;
     padding: 7px;
-    width:450px;
-    height: 450px;
+    width:350px;
+    height: 350px;
     margin: 10px;
     align-items: center;
     border-radius: 25px;
@@ -727,7 +735,7 @@ span{
 }
 .slide-controls{
     position: absolute;
-    top: 50%;
+    bottom: 0;
     left: 0;
     transform: translateY(-50%);
     width: 100%;
@@ -735,23 +743,27 @@ span{
     justify-content: space-between;
     align-items: center;
 }
-.description{
+.product-description{
     align-items: center;
     text-align: center;
     margin: 30px;
     padding: 20px;
-    width: 350px;
+    width: 50%;
     height: 350px;
     display: block;
-    
-
+    position: absolute;
+    color:#222;
+    opacity: 0;
     
 }
-.description h2{
+.slide:hover .product-description{
+    opacity: 1;
+}
+.product-description h2{
     font-size: 50px;
     font-weight: 600;
 }
-.description p{
+.product-description p{
     font-size: 20px;
 }
 #next-btn, #prev-btn{
@@ -853,7 +865,7 @@ span{
     width: 60%;
     height: 200px;
 }
-.description{
+.about-description{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -861,12 +873,12 @@ span{
     text-align: center;
     width: 80%;
 }
-.description h2{
+.about-description h2{
     font-size: 27px;
     height: 50px;
     padding: 10px;
 }
-.description p{
+.about-description p{
     text-align: justify;
 }
 
@@ -1367,6 +1379,20 @@ hr{
         
         
     }
+    .main-right-column{
+        display: none;
+    }
+    .main-left-column{
+        width: 100%;
+    }
+    .main-left-column h3{
+        font-size: 50px;
+        text-shadow: 2px 2px 5px #e3c7c7;
+
+    }
+    .main-left-column p{
+        width: 100%;
+    }
     .navbar ul{
        opacity: 0;
        pointer-events: none;
@@ -1389,7 +1415,7 @@ hr{
        flex-direction: row;
        height: 200px;
     }
-    .description p{
+    .about-description p{
         font-size: 18px;
     }
     .features-img{
@@ -1420,6 +1446,14 @@ hr{
         margin: 10px;
         
     }
+    .promo{
+        background-size: cover;
+    }
+    .promo-left, .promo-right{
+        width: 40%;
+        opacity: .8;
+    }
+   
     #treatment-header{
         width: 100%;
         align-self: center;
@@ -1456,10 +1490,48 @@ hr{
     .banner-container-about img{
        display: none;
     }
+    .promo{
+        flex-direction: column;
+    }
+    .promo-left, .promo-right{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        opacity: .8;
+        height: 250px;
+        position: relative;
+    }
+    .promo-left img, .promo-right img{
+        display: none;
+        
+    }
+    .promo-left h2, .promo-right h2{
+        font-size: 20px;
+        width: 100px;
+        margin: 5px;
+    }
+    .promo-left p, .promo-right p{
+        background-color: #96553d80;
+        color: #ddd;
+        margin: 5px;
+        font-size: 18px;
+        text-shadow: 2px 2px 5px #444;
+    }
+    .promo-left h1, .promo-right h1{
+        font-size: 25px;
+        width: 100px;
+    }
+    .promo-btn{
+       position: absolute;
+       left: 10%;
+       
+    }
+    
     .container-about{
         width: 100%;
         margin-bottom: 10px;
     }
+
    .input-date{
     width: 300px;
    }
